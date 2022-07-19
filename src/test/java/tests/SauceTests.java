@@ -35,7 +35,7 @@ public class SauceTests extends BaseTest {
                 driver.findElement(By.xpath("//*[@id='cart_contents_container']/div/div[1]/div[3]/div[2]/div[2]/div")).getText();
         Assert.assertEquals(price, "$29.99");
 
-        String itemTitle = driver.findElement(By.xpath("//*[@id=\"item_4_title_link\"]/div")).getText();
+        String itemTitle = driver.findElement(By.xpath("//*[@id='item_4_title_link']/div")).getText();
         Assert.assertEquals(itemTitle, "Sauce Labs Backpack");
     }
 }
