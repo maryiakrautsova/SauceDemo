@@ -1,5 +1,6 @@
 package tests;
 
+import constants.Creds;
 import constants.Urls;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -36,16 +37,16 @@ public class LearningSeleniumLocatorsTests {
 
     @Test
     public void findTwitterLinkTest() {
-        driver.findElement(By.name("user-name")).sendKeys("standard_user");
-        driver.findElement(By.name("password")).sendKeys("secret_sauce");
+        driver.findElement(By.name("user-name")).sendKeys(Creds.LOGIN);
+        driver.findElement(By.name("password")).sendKeys(Creds.PASSWORD);
         driver.findElement(By.cssSelector("[value=Login]")).click();
         WebElement twitterLink = driver.findElement(By.linkText("Twitter"));
     }
 
     @Test
     public void findLinkedInLinkTest() {
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("user-name")).sendKeys(Creds.LOGIN);
+        driver.findElement(By.id("password")).sendKeys(Creds.PASSWORD);
         driver.findElement(By.cssSelector("[value=Login]")).click();
         WebElement linkedInLink = driver.findElement(By.partialLinkText("Linked"));
     }
@@ -100,8 +101,8 @@ public class LearningSeleniumLocatorsTests {
     @Test
     public void findCopyRightTest() {
         //search using .class
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("user-name")).sendKeys(Creds.LOGIN);
+        driver.findElement(By.id("password")).sendKeys(Creds.PASSWORD);
         driver.findElement(By.cssSelector("[value=Login]")).click();
         WebElement copyRight = driver.findElement(By.cssSelector("div[class='footer_copy']"));
     }
@@ -109,8 +110,8 @@ public class LearningSeleniumLocatorsTests {
     @Test
     public void findContentsWrapperTest() {
         //search using #id
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("user-name")).sendKeys(Creds.LOGIN);
+        driver.findElement(By.id("password")).sendKeys(Creds.PASSWORD);
         driver.findElement(By.cssSelector("[value=Login]")).click();
         WebElement contentsWrapper = driver.findElement(By.cssSelector("div[id='contents_wrapper']"));
     }
