@@ -19,7 +19,6 @@ public class SauceTests extends BaseTest {
         logInFormPage.usernameInput();
         logInFormPage.passwordInput();
         logInFormPage.clickLogin();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         ProductsCataloguePage productsCataloguePage = new ProductsCataloguePage(driver);
         productsCataloguePage.addToCartItemOne();
