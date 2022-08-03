@@ -20,11 +20,11 @@ public class LogInFormPage extends BasePage {
         driver.get(Urls.MAIN_PAGE_URL);
     }
 
-    public void usernameInput() {
+    public void usernameInput(String username) {
         driver.findElement(USERNAME_INPUT).sendKeys(Creds.LOGIN);
     }
 
-    public void passwordInput() {
+    public void passwordInput(String password) {
         driver.findElement(PASSWORD_INPUT).sendKeys(Creds.PASSWORD);
     }
 

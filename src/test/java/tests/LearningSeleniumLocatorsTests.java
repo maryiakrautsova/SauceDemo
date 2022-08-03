@@ -18,7 +18,7 @@ public class LearningSeleniumLocatorsTests {
     public void setUp() {
         PropertyManager propertyManager = new PropertyManager();
         propertyManager.loadData();
-        System.setProperty("webdriver.Safari.driver", propertyManager.get("PATH_TO_DRIVER"));
+        System.setProperty("webdriver.Safari.driver", propertyManager.get("PATH_TO_CHROME_DRIVER"));
         driver = new SafariDriver();
 
         driver.get(Urls.MAIN_PAGE_URL);
