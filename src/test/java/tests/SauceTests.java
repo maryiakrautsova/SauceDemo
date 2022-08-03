@@ -1,23 +1,22 @@
 package tests;
 
-import constants.Creds;
-import constants.Urls;
-import org.openqa.selenium.By;
+import models.LoginModel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.pompages.CartPage;
 import pages.pompages.LogInFormPage;
 import pages.pompages.ProductsCataloguePage;
+import testdata.PrepareLoginData;
 
-import java.util.concurrent.TimeUnit;
-
-public class SauceTests extends BaseTest {
+public class SauceTests extends BaseWithFactoryTest {
     @Test
     public void addItemToTheCartTest() {
         LogInFormPage logInFormPage = new LogInFormPage(driver);
         logInFormPage.openMainPage();
-        logInFormPage.usernameInput();
-        logInFormPage.passwordInput();
+
+        LoginModel loginModel = PrepareLoginData.getStandardLogin();
+        logInFormPage.usernameInput(loginModel.getUsername());
+        logInFormPage.passwordInput(loginModel.getPassword());
         logInFormPage.clickLogin();
 
         ProductsCataloguePage productsCataloguePage = new ProductsCataloguePage(driver);
