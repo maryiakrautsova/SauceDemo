@@ -14,13 +14,11 @@ public class CartFluentPage extends BaseFluentPage {
         super(driver);
     }
 
-    public CartFluentPage getPrice() {
-        driver.findElement(PRICE).getText();
-        return this;
+    public String getPrice() {
+        return driver.findElement(PRICE).getText();
     }
 
-    public CartFluentPage getProductTitle() {
-        driver.findElement(PRODUCT_TITLE).getText();
-        return this;
+    public String getProductTitle() {
+        return driver.findElement(PRODUCT_TITLE).getText();
     }
 }

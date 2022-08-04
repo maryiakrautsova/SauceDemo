@@ -1,4 +1,4 @@
-package drivermanager.factorymanager;
+package factorymanager;
 
 import org.openqa.selenium.WebDriver;
 

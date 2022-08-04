@@ -1,4 +1,4 @@
-package drivermanager.factorymanager;
+package factorymanager;
 
 public class DriverFactory {
     public DriverManager getManager(DriverType driverType) {

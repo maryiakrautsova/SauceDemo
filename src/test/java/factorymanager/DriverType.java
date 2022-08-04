@@ -1,4 +1,4 @@
-package drivermanager.factorymanager;
+package factorymanager;
 
 public enum DriverType {
     CHROME,
