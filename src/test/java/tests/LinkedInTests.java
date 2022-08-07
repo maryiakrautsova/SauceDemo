@@ -9,7 +9,7 @@ import pages.pompages.LinkedInMainPage;
 import pages.pompages.LogInFormPage;
 import testdata.PrepareLoginData;
 
-public class LinkedInTests extends BaseTest {
+public class LinkedInTests extends BaseWithFactoryTest {
     @Test
     public void transferToLinkedinMainPageTest() {
         LogInFormPage logInFormPage = new LogInFormPage(driver);
@@ -22,7 +22,7 @@ public class LinkedInTests extends BaseTest {
         LinkedInMainPage linkedInMainPage = new LinkedInMainPage(driver);
         linkedInMainPage.clickLinkedInButton();
         linkedInMainPage.switchToNewTab();
-        WebDriverWait wait = new WebDriverWait(driver, 20);
+        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("icon > svg")));
         setImplicitlyWait();
     }
