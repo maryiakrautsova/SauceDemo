@@ -17,7 +17,7 @@ public class BaseWithFactoryTest {
     @BeforeMethod
     public void setUp() {
         DriverFactory driverFactory = new DriverFactory();
-        driverManager = driverFactory.getManager(DriverType.REMOTE);
+        driverManager = driverFactory.getManager(DriverType.CHROME);
         driverManager.createDriver();
         driverManager.setTimeout();
         driverManager.startMaximize();
