@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.fluentpage.CartFluentPage;
 import pages.fluentpage.LogInFormFluentPage;
 
-public class SauceFluentTests extends BaseTest {
+public class SauceFluentTests extends BaseWithFactoryTest {
     @Test
     public void addItemToTheCartTest() {
         LogInFormFluentPage logInFormFluentPage = new LogInFormFluentPage(driver);
