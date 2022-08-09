@@ -6,9 +6,10 @@ import org.testng.annotations.Test;
 import pages.loadablepage.CartLoadablePage;
 import pages.loadablepage.LogInFormLoadablePage;
 import pages.loadablepage.ProductsCatalogueLoadablePage;
+import utils.RetryAnalyzer;
 
 public class SauceLoadableTests extends BaseWithFactoryTest {
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void addItemToTheCartTest() {
         LogInFormLoadablePage logInFormLoadablePage = new LogInFormLoadablePage(driver);
         logInFormLoadablePage.openMainPage();
