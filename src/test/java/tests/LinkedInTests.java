@@ -6,9 +6,10 @@ import org.testng.annotations.Test;
 import pages.pompages.LinkedInMainPage;
 import pages.pompages.LogInFormPage;
 import testdata.PrepareLoginData;
+import utils.RetryAnalyzer;
 
 public class LinkedInTests extends BaseWithFactoryTest {
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void transferToLinkedinMainPageTest() {
         LogInFormPage logInFormPage = new LogInFormPage(driver);
         logInFormPage.openMainPage();

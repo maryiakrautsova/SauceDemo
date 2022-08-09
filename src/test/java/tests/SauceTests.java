@@ -7,9 +7,10 @@ import pages.pompages.CartPage;
 import pages.pompages.LogInFormPage;
 import pages.pompages.ProductsCataloguePage;
 import testdata.PrepareLoginData;
+import utils.RetryAnalyzer;
 
 public class SauceTests extends BaseWithFactoryTest {
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void addItemToTheCartTest() {
         LogInFormPage logInFormPage = new LogInFormPage(driver);
         logInFormPage.openMainPage();
@@ -29,6 +30,5 @@ public class SauceTests extends BaseWithFactoryTest {
 
         Assert.assertEquals(price, "$29.99");
         Assert.assertEquals(itemTitle, "Sauce Labs Backpack");
-
     }
 }

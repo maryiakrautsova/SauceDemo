@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameters Tests">
+    <parameter name="browser" value="chrome"></parameter>
+    <test name="Adding product items to the Cart.">
+        <classes>
+            <class name="tests.SauceTests"></class>
+            <class name="tests.SauceLoadableTests"></class>
+        </classes>
+    </test>
+    <test name="Transfer to the new Website.">
+        <classes>
+            <class name="tests.LinkedInTests"></class>
+        </classes>
+    </test>
+</suite>
